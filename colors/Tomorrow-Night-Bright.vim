@@ -333,22 +333,35 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("coffeeConditional", s:purple, "", "")
 
 	" JavaScript Highlighting
-	call <SID>X("javaScriptBraces", s:foreground, "", "")
-	call <SID>X("javaScriptFunction", s:purple, "", "")
-	call <SID>X("javaScriptConditional", s:purple, "", "")
-	call <SID>X("javaScriptRepeat", s:purple, "", "")
-	call <SID>X("javaScriptNumber", s:orange, "", "")
-	call <SID>X("javaScriptMember", s:orange, "", "")
+	call <SID>X("jsBraces", s:foreground, "", "")
+	call <SID>X("jsFunction", s:purple, "", "")
+	call <SID>X("jsConditional", s:purple, "", "")
+	call <SID>X("jsRepeat", s:purple, "", "")
+	call <SID>X("jsNumber", s:orange, "", "")
+	call <SID>X("jsMember", s:orange, "", "")
+	call <SID>X("jsReturn", s:purple, "", "")
+  call <SID>X("jsTemplateBraces", s:red, "", "")
+  " call <SID>X("jsTemplateExpression", s:orange, "", "")
+  call <SID>X("jsTemplateString", s:green, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:red, "", "")
 	call <SID>X("htmlTagName", s:red, "", "")
-	call <SID>X("htmlArg", s:red, "", "")
+	call <SID>X("htmlArg", s:blue, "", "")
 	call <SID>X("htmlScriptTag", s:red, "", "")
 
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
 	call <SID>X("diffRemoved", s:red, "", "")
+
+  " vim-signify
+  call <SID>X('SignifySignAdd', s:green, "", "")
+  call <SID>X('SignifySignChange', s:blue, "", "")
+  call <SID>X('SignifySignDelete', s:red, "", "")
+
+  " ale
+  call <SID>X('ALEErrorSign', s:red, "", "")
+  call <SID>X('ALEWarningSign', s:yellow, "", "")
 
 	" Delete Functions
 	delf <SID>X
