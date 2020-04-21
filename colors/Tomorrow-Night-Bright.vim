@@ -5,7 +5,7 @@
 
 " Default GUI Colours
 let s:foreground = "eaeaea"
-let s:background = "000000"
+let s:background = "282828"
 let s:selection = "424242"
 let s:line = "2a2a2a"
 let s:comment = "969896"
@@ -17,6 +17,12 @@ let s:aqua = "70c0b1"
 let s:blue = "7aa6da"
 let s:purple = "c397d8"
 let s:window = "4d5057"
+let s:grey = "303030"
+
+let s:dark_yellow = "c3b622"
+let s:grey2 = "3a3a3a"
+let s:grey3 = "4e4e4e"
+let s:purple_93 = "8700ff"
 
 set background=dark
 hi clear
@@ -241,14 +247,14 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("TabLine", s:foreground, s:background, "reverse")
 	call <SID>X("StatusLine", s:window, s:yellow, "reverse")
 	call <SID>X("StatusLineNC", s:window, s:foreground, "reverse")
-	call <SID>X("VertSplit", s:window, s:window, "none")
+	call <SID>X("VertSplit", s:grey, s:grey, "none")
 	call <SID>X("Visual", "", s:selection, "")
 	call <SID>X("Directory", s:blue, "", "")
 	call <SID>X("ModeMsg", s:green, "", "")
 	call <SID>X("MoreMsg", s:green, "", "")
 	call <SID>X("Question", s:green, "", "")
 	call <SID>X("WarningMsg", s:red, "", "")
-	call <SID>X("MatchParen", "", s:selection, "")
+	call <SID>X("MatchParen", "", s:purple_93, "")
 	call <SID>X("Folded", s:comment, s:background, "")
 	call <SID>X("FoldColumn", "", s:background, "")
 	if version >= 700
@@ -284,6 +290,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Vim Highlighting
 	call <SID>X("vimCommand", s:red, "", "none")
+
+	call <SID>X("DiffAdd", s:green, s:grey2  ,"")
+	call <SID>X("DiffChange", s:blue, s:grey2, "")
+	call <SID>X("DiffDelete", s:red, s:grey2, "")
+	call <SID>X("DiffText", s:dark_yellow, s:grey3, "none")
 
 	" C Highlighting
 	call <SID>X("cType", s:yellow, "", "")
@@ -343,16 +354,24 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("jsTemplateBraces", s:red, "", "")
   " call <SID>X("jsTemplateExpression", s:orange, "", "")
   call <SID>X("jsTemplateString", s:green, "", "")
+  call <SID>X("jsAsyncKeyword", s:blue, "", "")
+  call <SID>X("jsForAwait", s:blue, "", "")
+  call <SID>X("jsObjectKey", s:red, "", "")
+  call <SID>X( "jsObjectBraces", s:dark_yellow, "", "" )
+
+  " JSON Highlighting
+  call <SID>X( "jsonBraces",       s:dark_yellow, "", "" )
+  call <SID>X( "jsonQuote",        s:green, "", "" )
+  call <SID>X( "jsonNumber",       s:orange,   "", "" )
+  " call <SID>X( "jsonNoise",        s:purple, "", "" )
+  call <SID>X( "jsonKeyword",      s:red, "", "" )
+  " call <SID>X( "jsonKeywordMatch", s:blue, "", "" )
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:red, "", "")
 	call <SID>X("htmlTagName", s:red, "", "")
 	call <SID>X("htmlArg", s:blue, "", "")
 	call <SID>X("htmlScriptTag", s:red, "", "")
-
-	" Diff Highlighting
-	call <SID>X("diffAdded", s:green, "", "")
-	call <SID>X("diffRemoved", s:red, "", "")
 
   " vim-signify
   call <SID>X('SignifySignAdd', s:green, "", "")
@@ -362,6 +381,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " ale
   call <SID>X('ALEErrorSign', s:red, "", "")
   call <SID>X('ALEWarningSign', s:yellow, "", "")
+
+  " vim-peekaboo
+  call <SID>X('peekabooTitle', s:red, "", "")
+  call <SID>X('peekabooTitleColon', s:red, "", "")
+  call <SID>X('peekabooReg', s:green, "", "")
+  call <SID>X('peekabooRegColon', s:blue, "", "")
+  call <SID>X('peekabooSelected', s:yellow, "", "")
 
 	" Delete Functions
 	delf <SID>X
