@@ -373,6 +373,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("jsFuncCall",                 s:blue, "", "bold")
   call <SID>X("jsClassFuncName",            s:blue, "",     "")
   call <SID>X("jsClassMethodType",        s:purple, "",     "")
+  call <SID>X("jsClassProperty",        s:foreground, "",     "")
   call <SID>X("jsRegexpString",             s:aqua, "",     "")
   call <SID>X("jsGlobalObjects",          s:orange, "",     "")
   call <SID>X("jsGlobalNodeObjects",      s:orange, "",     "")
@@ -391,7 +392,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " call <SID>X( "jsonKeywordMatch", s:blue, "", "" )
 
   " JSX
-	call <SID>X("jsxAttrib",       s:blue, "", "")
+	call <SID>X("jsxAttrib",       s:orange, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag",        s:red, "", "")
