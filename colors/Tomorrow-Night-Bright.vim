@@ -25,6 +25,7 @@ let s:grey_37       = "5f5f5f"
 let s:grey_237       = "3a3a3a"
 let s:grey_239       = "4e4e4e"
 let s:purple_93   = "8700ff"
+let s:red_174   = "e48c8f"
 
 set background=dark
 hi clear
@@ -246,7 +247,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Debug",               s:red, "",                   "")
 	call <SID>X("Directory",          s:blue, "",                   "")
 	call <SID>X("Error",        s:background, s:red,                "")
-	call <SID>X("Error",               s:red, s:background,         "")
+	call <SID>X("SpellBad",        s:background, s:red_174,                "")
 	call <SID>X("Exception",           s:red, "",                   "")
 	call <SID>X("FoldColumn",             "", s:background,         "")
 	call <SID>X("Folded",          s:comment, s:background,         "")
