@@ -247,7 +247,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Debug",               s:red, "",                   "")
 	call <SID>X("Directory",          s:blue, "",                   "")
 	call <SID>X("Error",        s:background, s:red,                "")
-	call <SID>X("SpellBad",        s:background, s:red_174,                "")
+	call <SID>X("SpellBad",       s:foreground, s:background,         "underline")
 	call <SID>X("Exception",           s:red, "",                   "")
 	call <SID>X("FoldColumn",             "", s:background,         "")
 	call <SID>X("Folded",          s:comment, s:background,         "")
