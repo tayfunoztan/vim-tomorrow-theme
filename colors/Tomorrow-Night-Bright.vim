@@ -4,7 +4,8 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "eaeaea"
+let s:foreground = "d0d0d0"
+" let s:foreground = "eaeaea"
 let s:background = "282828"
 let s:selection  = "424242"
 let s:line       = "2a2a2a"
@@ -18,14 +19,15 @@ let s:blue       = "7aa6da"
 let s:purple     = "c397d8"
 let s:window     = "4d5057"
 let s:grey       = "303030"
-let s:black       = "000000"
+let s:black      = "000000"
 
 let s:dark_yellow = "c3b622"
-let s:grey_37       = "5f5f5f"
-let s:grey_237       = "3a3a3a"
-let s:grey_239       = "4e4e4e"
+let s:grey_37     = "5f5f5f"
+let s:grey_237    = "3a3a3a"
+let s:grey_238    = "444444"
+let s:grey_239    = "4e4e4e"
 let s:purple_93   = "8700ff"
-let s:red_174   = "e48c8f"
+let s:red_174     = "e48c8f"
 
 set background=dark
 hi clear
@@ -242,39 +244,40 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Vim Highlighting
-	call <SID>X("Normal",       s:foreground, s:background,         "")
-	call <SID>X("Bold",                   "", "",               "bold")
-	call <SID>X("Debug",               s:red, "",                   "")
-	call <SID>X("Directory",          s:blue, "",                   "")
-	call <SID>X("Error",        s:background, s:red,                "")
-	call <SID>X("SpellBad",       s:foreground, s:background,         "underline")
-	call <SID>X("Exception",           s:red, "",                   "")
-	call <SID>X("FoldColumn",             "", s:background,         "")
-	call <SID>X("Folded",          s:comment, s:background,         "")
-	call <SID>X("IncSearch",        s:yellow, s:black,              "")
-	call <SID>X("Italic",                 "", "",               "none")
-	call <SID>X("Macro",               s:red, "",               "none")
-	call <SID>X("MatchParen",   s:foreground, s:purple_93,          "")
-	call <SID>X("ModeMsg",           s:green, "",                   "")
-	call <SID>X("MoreMsg",           s:green, "",                   "")
-	call <SID>X("Question",           s:blue, "",                   "")
-	call <SID>X("Substitute",        s:black, s:yellow,             "")
-	call <SID>X("SpecialKey",       s:yellow, "",                   "")
-	call <SID>X("LineNr",        s:grey_239, "",                   "")
-	call <SID>X("NonText",       s:grey_37, "",                   "")
-	call <SID>X("SpecialKey",    s:selection, "",                   "")
-	call <SID>X("Search",            s:black, s:dark_yellow,        "")
-	call <SID>X("TabLine",      s:foreground, s:background,  "reverse")
-	call <SID>X("StatusLine",       s:window, s:yellow,      "reverse")
-	call <SID>X("StatusLineNC",     s:window, s:foreground,  "reverse")
-	call <SID>X("VertSplit",          s:grey, s:grey,           "none")
-	call <SID>X("Visual",                 "", s:selection,          "")
-	call <SID>X("WarningMsg",          s:red, "",                   "")
-  call <SID>X("CursorLine",             "", s:grey_237,       "none")
-  call <SID>X("CursorColumn",           "", s:grey_237,       "none")
-  call <SID>X("PMenu",        s:foreground, s:selection,      "none")
-  call <SID>X("PMenuSel",     s:foreground, s:selection,   "reverse")
-  call <SID>X("SignColumn",             "", s:background,     "none")
+	call <SID>X("Normal",       s:foreground, s:background,           "")
+	call <SID>X("Bold",                   "", "",                 "bold")
+	call <SID>X("Debug",               s:red, "",                     "")
+	call <SID>X("Directory",          s:blue, "",                     "")
+	call <SID>X("Error",        s:background, s:red,                  "")
+	call <SID>X("SpellBad",     s:foreground, s:background,  "underline")
+	call <SID>X("SpellCap",     s:foreground, s:background,  "underline")
+	call <SID>X("Exception",           s:red, "",                     "")
+	call <SID>X("FoldColumn",             "", s:background,           "")
+	call <SID>X("Folded",          s:comment, s:background,           "")
+	call <SID>X("IncSearch",        s:yellow, s:black,                "")
+	call <SID>X("Italic",                 "", "",                 "none")
+	call <SID>X("Macro",               s:red, "",                 "none")
+	call <SID>X("MatchParen",   s:foreground, s:purple_93,            "")
+	call <SID>X("ModeMsg",           s:green, "",                     "")
+	call <SID>X("MoreMsg",           s:green, "",                     "")
+	call <SID>X("Question",           s:blue, "",                     "")
+	call <SID>X("Substitute",        s:black, s:yellow,               "")
+	call <SID>X("SpecialKey",       s:yellow, "",                     "")
+	call <SID>X("LineNr",         s:grey_239, "",                     "")
+	call <SID>X("NonText",         s:grey_37, "",                     "")
+	call <SID>X("SpecialKey",    s:selection, "",                     "")
+	call <SID>X("Search",            s:black, s:dark_yellow,          "")
+	call <SID>X("TabLine",      s:foreground, s:background,    "reverse")
+	call <SID>X("StatusLine",       s:window, s:yellow,        "reverse")
+	call <SID>X("StatusLineNC",     s:window, s:foreground,    "reverse")
+	call <SID>X("VertSplit",          s:grey, s:grey,             "none")
+	call <SID>X("Visual",                 "", s:selection,            "")
+	call <SID>X("WarningMsg",          s:red, "",                     "")
+  call <SID>X("CursorLine",             "", s:grey_237,         "none")
+  call <SID>X("CursorColumn",           "", s:grey_237,         "none")
+  call <SID>X("PMenu",        s:foreground, s:selection,        "none")
+  call <SID>X("PMenuSel",     s:foreground, s:selection,     "reverse")
+  call <SID>X("SignColumn",             "", s:background,       "none")
 
 	" Standard Highlighting
 	call <SID>X("Boolean",       s:orange, "",               "")
@@ -285,13 +288,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Define",        s:purple, "",           "none")
 	call <SID>X("Delimiter",     s:orange, "",               "")
 	call <SID>X("Float",         s:orange, "",               "")
-	call <SID>X("Function",        s:blue, "",               "")
+	call <SID>X("Function",        s:blue, "",           "bold")
 	call <SID>X("Identifier",       s:red, "",           "none")
 	call <SID>X("Include",         s:blue, "",               "")
 	call <SID>X("Keyword",       s:purple, "",               "")
 	call <SID>X("Label",         s:yellow, "",               "")
 	call <SID>X("Number",        s:orange, "",               "")
-	call <SID>X("Operator",        s:aqua, "",           "none")
+	call <SID>X("Operator",         s:red, "",           "none")
 	call <SID>X("PreProc",       s:purple, "",               "")
 	call <SID>X("Repeat",        s:purple, "",               "")
 	call <SID>X("Special",         s:aqua, "",               "")
@@ -303,19 +306,19 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Tag",           s:yellow, "",               "")
 	call <SID>X("Todo",          s:yellow, s:background,     "")
 	call <SID>X("Type",          s:yellow, "",           "none")
-	call <SID>X("Typedef",       s:yellow, s:grey_237,      "none")
+	call <SID>X("Typedef",       s:yellow, s:grey_237,   "none")
 	"call <SID>X("Ignore", "666666", "", "")
 
   " Diff highlighting
-	call <SID>X("diffAdded",         s:green, s:grey_237,     "")
-	call <SID>X("diffRemoved",         s:red, s:grey_237,     "")
-	call <SID>X("DiffAdd",           s:green, s:grey_237,     "")
-	call <SID>X("DiffChange",         s:blue, s:grey_237,     "")
-	call <SID>X("DiffDelete",          s:red, s:grey_237,     "")
+	call <SID>X("diffAdded",         s:green, s:grey_238,     "")
+	call <SID>X("diffRemoved",         s:red, s:grey_238,     "")
+	call <SID>X("DiffAdd",           s:green, s:grey_238,     "")
+	call <SID>X("DiffChange",         s:blue, s:grey_238,     "")
+	call <SID>X("DiffDelete",          s:red, s:grey_238,     "")
 	call <SID>X("DiffText",    s:dark_yellow, s:grey_239, "none")
 
 	" C Highlighting
-	call <SID>X("cOperator",         s:aqua, "", "")
+	call <SID>X("cOperator",    s:aqua, "", "")
 	call <SID>X("cPreCondit", s:purple, "", "")
 
 	" PHP Highlighting
@@ -339,12 +342,16 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyRepeat",                 s:purple, "", "")
 
 	" Python Highlighting
-	call <SID>X("pythonInclude",     s:purple, "", "")
-	call <SID>X("pythonStatement",   s:purple, "", "")
-	call <SID>X("pythonConditional", s:purple, "", "")
-	call <SID>X("pythonRepeat",      s:purple, "", "")
-	call <SID>X("pythonException",   s:purple, "", "")
-	call <SID>X("pythonFunction",      s:blue, "", "")
+	call <SID>X("pythonInclude",     s:purple, "",     "")
+	call <SID>X("pythonStatement",   s:purple, "",     "")
+	call <SID>X("pythonConditional", s:purple, "",     "")
+	call <SID>X("pythonRepeat",      s:purple, "",     "")
+	call <SID>X("pythonException",   s:purple, "",     "")
+	call <SID>X("pythonFunction",      s:blue, "",     "")
+	call <SID>X("pythonFString",      s:green, "",     "")
+	call <SID>X("pythonRawFString",   s:green, "",     "")
+	call <SID>X("pythonDottedName ",  s:green, "", "bold")
+	call <SID>X("pythonDecorator ",     s:red, "",     "")
 
 	" Go Highlighting
 	call <SID>X("goStatement",   s:purple, "", "")
@@ -374,7 +381,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("jsFuncCall",                 s:blue, "", "bold")
   call <SID>X("jsClassFuncName",            s:blue, "",     "")
   call <SID>X("jsClassMethodType",        s:purple, "",     "")
-  call <SID>X("jsClassProperty",        s:foreground, "",     "")
+  call <SID>X("jsClassProperty",      s:foreground, "",     "")
   call <SID>X("jsRegexpString",             s:aqua, "",     "")
   call <SID>X("jsGlobalObjects",          s:orange, "",     "")
   call <SID>X("jsGlobalNodeObjects",      s:orange, "",     "")
@@ -407,16 +414,16 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X('SignifySignDelete',   s:red, "", "")
 
   " Startify highlighting
-  call <SID>X("StartifyBracket",  s:window, "", "")
-  call <SID>X("StartifyFile",     s:blue, "", "")
-  call <SID>X("StartifyFooter",   s:window, "", "")
+  call <SID>X("StartifyBracket", s:window, "", "")
+  call <SID>X("StartifyFile",      s:blue, "", "")
+  call <SID>X("StartifyFooter",  s:window, "", "")
   call <SID>X("StartifyHeader",   s:green, "", "")
-  call <SID>X("StartifyNumber",   s:orange, "", "")
-  call <SID>X("StartifyPath",     s:window, "", "")
-  call <SID>X("StartifySection",  s:purple, "", "")
-  call <SID>X("StartifySelect",   s:aqua, "", "")
-  call <SID>X("StartifySlash",    s:window, "", "")
-  call <SID>X("StartifySpecial",  s:window, "", "")
+  call <SID>X("StartifyNumber",  s:orange, "", "")
+  call <SID>X("StartifyPath",    s:window, "", "")
+  call <SID>X("StartifySection", s:purple, "", "")
+  call <SID>X("StartifySelect",    s:aqua, "", "")
+  call <SID>X("StartifySlash",   s:window, "", "")
+  call <SID>X("StartifySpecial", s:window, "", "")
 
   " ale
   call <SID>X('ALEErrorSign',      s:red, "", "")
@@ -430,9 +437,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X('peekabooSelected',   s:yellow, "", "")
 
   " NERDTree highlighting
-  call <SID>X('NERDTreeDirSlash',     s:red, "", "")
-  call <SID>X('NERDTreeDir',   s:green, "", "")
-  call <SID>X('NERDTreeExecFile',   s:yellow, "", "")
+  call <SID>X('NERDTreeDirSlash',    s:red, "", "")
+  call <SID>X('NERDTreeDir',       s:green, "", "")
+  call <SID>X('NERDTreeExecFile', s:yellow, "", "")
 
 	" Delete Functions
 	delf <SID>X
